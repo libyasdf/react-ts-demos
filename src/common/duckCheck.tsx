@@ -75,4 +75,28 @@ namespace c {
 
     }
     log = log1 // 需要的都满足 - 不能双向协变
+
+    log1(true)
+
+    interface empty<T> {
+
+    }
+    // 先判断具体的类型，再兼容
+    let x!: empty<string>;
+    let y!: empty<number>;
+    x = y //empty空的时候可以
+
+
+    // 枚举的兼容性
+    enum Colors {
+        Red, Yellow// 就是数字
+    }
+
+    let c: Colors
+    c = Colors.Red // 0
+    c = 0
+
+    let b:number;
+    b = 1 // Yellow
 }
+
