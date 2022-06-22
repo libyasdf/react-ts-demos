@@ -50,3 +50,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## 编译选项(官网)
 tsconfig相关
+
+## interface
+[类型](https://wenku.baidu.com/view/066194f525fff705cc1755270722192e45365836?pcf=2&bfetype=new)  
