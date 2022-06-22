@@ -89,3 +89,37 @@ namespace b {
 // interface - 真实的类型，可以被导入和导出
 // type - 临时的别名，不会产生真正的类型
 // class - 定义类， new XXX
+
+
+namespace c {
+    interface bird {
+        name1: String
+    }
+    interface sky {
+        name2: String
+    }
+
+    interface water {
+        name3: String
+    }
+    interface fish {
+        name4: String
+    }
+
+    interface fish2 {
+        name4: String;
+        age: Number;
+    }
+
+    type con<T> = T extends fish ? water : sky;
+    let a: con<fish> = {// fish2 也可以这么用，只要包含对方的属性即可（只能多，不能少）
+        name3: 'fish'
+    }
+
+    // 条件类型的分发
+    let c1: con<fish | bird> = { name2: 's' } // water | sky
+}
+
+namespace d {
+    // 
+}
