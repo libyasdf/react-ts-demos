@@ -176,3 +176,19 @@ namespace e {
     let arr: sd[] = [sd.Spring, sd.winter];
 
 }
+
+// 复杂类型声明
+declare namespace jQuery {
+    
+    function ajax(url: String): void;
+    let name: String;
+    namespace fn {
+        function extend(object:any): void;
+    }
+}
+// 外部声明（外部声明文件）
+// *.d.ts
+
+namespace g {
+    $('#root').click();
+}

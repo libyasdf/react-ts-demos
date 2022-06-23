@@ -53,3 +53,8 @@ tsconfig相关
 
 ## interface
 [类型](https://wenku.baidu.com/view/066194f525fff705cc1755270722192e45365836?pcf=2&bfetype=new)  
+
+## VScode library
+- type auto installer
+
+cnpm i @types/jquery -S
