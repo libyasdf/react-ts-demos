@@ -1,3 +1,4 @@
+import { waitForElementToBeRemoved } from "@testing-library/react";
 import { type } from "os";
 
 namespace a {
@@ -153,4 +154,25 @@ namespace d {
     }
     type p = InstanceType<typeof efive>;
     let e6: p = new efive('zf');
+}
+
+namespace e {
+    export class Dog {
+
+    }
+    // 类型声明(对于在TS中使用JS的问题)
+    // 声明文件怎么写
+    // - TS 重新
+    // - 配上声明文件
+    declare let name: String;
+    declare function getName(): String;
+    declare class Animal { name: String };
+
+    declare const enum sd {
+        Spring,
+        winter
+    }
+
+    let arr: sd[] = [sd.Spring, sd.winter];
+
 }
