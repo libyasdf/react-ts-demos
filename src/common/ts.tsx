@@ -1,3 +1,5 @@
+import { type } from "os";
+
 namespace a {
     interface Person3 {
         name: String;
@@ -120,6 +122,35 @@ namespace c {
     let c1: con<fish | bird> = { name2: 's' } // water | sky
 }
 
+/* 内置条件类型 */
 namespace d {
-    // 
+    // 从参数一中排除参数二
+    type E = Exclude<String | Number, String>;
+    let e: E = 10;
+
+    // 提取
+    type E2 = Extract<String | Number | null, String>;
+    let e2: E2 = 's';
+
+    // 不为空
+    type E3 = NonNullable<null | undefined | String>;
+    let e3: E3 = 's';
+
+    function a() {
+        return { name: 's', age: 10 };
+    }
+
+    // 得到返回值的类型
+    type E4 = ReturnType<typeof a>;
+    let e4: E4 = { name: '', age: 1 }
+
+    // 构造函数的实例类型
+    class efive {
+        name: String;
+        constructor(name: String) {
+            this.name = name;
+        }
+    }
+    type p = InstanceType<typeof efive>;
+    let e6: p = new efive('zf');
 }
