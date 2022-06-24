@@ -58,3 +58,14 @@ tsconfig相关
 - type auto installer
 
 cnpm i @types/jquery -S
+
+# node
+## upgrade
+- sudo npm install -g n
+- npm view node versions
+- sudo n latest/stable/
+## nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+## 
+- `nodemon app.js`
