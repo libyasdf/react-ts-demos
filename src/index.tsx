@@ -3,6 +3,31 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import axios, { AxiosResponse } from "axios";
+
+const baseUrl: String = 'https://localhost:8080';
+
+interface User {
+  name: String;
+  age: Number;
+}
+
+let user1: User = {
+  name: 'zf',
+  age: 10
+}
+
+axios({
+  method: 'get',
+  url: baseUrl + '/get',
+  params: user1
+}).then((respoense: AxiosResponse) => {
+console.log(respoense);
+return respoense.data;
+
+}).catch(()=>{
+  
+})
 
 ReactDOM.render(
   <React.StrictMode>
